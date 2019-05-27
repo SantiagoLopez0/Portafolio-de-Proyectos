@@ -66,7 +66,7 @@ Router.post('/messages', function(req, res){
 
 module.exports = Router
 
-(function(document, window, undefined, $){
+(function(document, window, undefined, $, io){
     (function (){
         return Chat = {
             //Todo el codigo
@@ -75,12 +75,20 @@ module.exports = Router
             $btnMessages : $('#btnMessage'),
             $messageText: $('#messageText'),
             userName: '',
+            socket: io(),
             
             Init: function(){
                 var self = this
                 this.fetchUserInfo(function(user){
                     self.renderUser(user)
                 })
+                this.watchMessages()
+                self.socket.on('userJoin', function(user){
+                    self.renderUser(user)
+                })
+                self.socket.on('message', function(message){
+                    self.renderUser(message)
+                })                
             },
             fetchUserInfo: function(callback){
                 var self = this
@@ -89,6 +97,7 @@ module.exports = Router
                 $GuardaInfo.on("click", function(){
                     var nombre = $('.nombreUsuario').val()
                     var user = [{nombre: nombre, img: 'p2.png'}]
+                    self.socket.emit('userJoin', user[0])
                     callback(user)
                     
                     self.joinUser(user[0])
@@ -151,6 +160,7 @@ module.exports = Router
                                 text: $(this).val()
                             }
                             self.renderMessage(message)
+                            self.socket.emit('message', message)
                             $(this).val('')
                         }else{
                             e.preventDefault()
@@ -164,6 +174,7 @@ module.exports = Router
                             text: $(this).val()
                         }
                         self.renderMessage(message)
+                        self.socket.emit('message', message)
                         $(this).val('')
                     }
                 })
@@ -198,4 +209,4 @@ module.exports = Router
         }
     })()
     Chat.Init()
-})(document, window, undefined, jQuery)
+})(document, window, undefined, jQuery, io)
