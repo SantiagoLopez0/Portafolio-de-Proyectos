@@ -1,0 +1,112 @@
+html {
+    overflow: hidden;
+}
+body {
+    margin: 0;
+    font-size: 26px;
+    font-family: 'Spectral', serif !important;
+    color: #000000 !important;
+    height: 100vh;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+h1{
+  text-align: center;
+}
+h1 a{
+  color: black;
+}
+nav{
+  height: 5vh;
+}
+.nav-item a{
+  color: black;
+}
+.rowHead img{
+  width: 100%;
+  height: 400px;
+}
+.mainContainer{
+  min-height: 70vh;
+}
+.mainContainer > div{
+  min-height: 50vh;
+}
+/*.mainContainer{
+  border-right: 1px solid gray;
+}*/
+.leftContent, .rightContent{
+  height: 50vh;
+}
+.leftContent h1, .leftContent p{
+  text-align: center;
+}
+.leftContent{
+  margin: 0 !important;
+  background-color: #BABABF;
+  position: absolute;
+  min-width: 70vw;
+}
+.rightContent{
+  display: flex;
+}
+.profileBox{
+  width: 90%;
+  height: 95%;
+  margin: auto;
+  background-image: url('./img/Profile1.jpg');
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: top;
+  background-size: cover;
+}
+.contactRow{
+  min-height: 45vh !important;
+  width: 100%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+.contactCol{
+  background-color: #BABABF;
+}
+.middleRow, .middleRow > div{
+  width: 100%;
+}
+.skillRow{
+  min-height: 100%;
+  color: white;
+}
+div[class*='skillCol']{
+  color: Black;
+  height: 50vh;
+  margin: auto;
+}
+.titleSkills{
+  color: Black;
+  text-align: center;
+  width: 100%;
+}
+.skillCol1{
+  background-image: url('./img/codigo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.skillCol2{
+  background-image: url('./img/ux.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.skillCol3{
+  background-image: url('./img/homeOffice.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.footerRow{
+  background-color: gray;
+  height: 30vh;
+}
