@@ -1,8 +1,8 @@
 Esta es la historia de Santiago López.
 
-Santiago tiene 19 años y medio.
+Santiago tiene 19 años.
 
 
-Santiago quiere aprender a programar en .NET CORE y esta feliz.
+Mañana nos enfocaremos en su vida laboral.
 
 Fin.
