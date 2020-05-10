@@ -3,6 +3,6 @@ Esta es la historia de Santiago López.
 Santiago tiene 19 años y medio.
 
 
-Santiago quiere aprender a programar en .NET CORE.
+Santiago quiere aprender a programar en .NET CORE y esta feliz.
 
 Fin.
