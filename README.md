@@ -7,4 +7,5 @@ Repositorio de proyectos web contantemente actualizando.
   - HTML, CSS3
   - Javascript
   - Node.JS
+  - PHP
 
